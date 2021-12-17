@@ -1,0 +1,207 @@
+body {
+    font-size: 13px;
+    background-color: hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+@media (min-width: 380px) {
+    
+    .parent {
+        width: 1040px;
+        height: fit-content;
+        display: grid;
+        grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+        gap: 30px 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    /* for all divs */
+    .parent > div {
+        padding: 20px;
+        border-radius:8px;
+        box-shadow: 0px 0px 20px 0px hsl(217deg 19% 35% / 30%);
+    }
+
+    span {
+        display: block;
+    }
+
+}
+
+    .parent > div > .container > img:first-of-type {
+        border-radius: 50%;
+        width: 30px;
+        margin-right: 15px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .main-detailes > * {
+        margin: 0;
+    }
+    /* end for all divs */
+
+    /* ----------------------------------------------------------------------------------- */
+
+    /* child 1 --> Daniel Clifford */
+    .parent > div:first-child {
+        grid-area: daniel;
+        background-color: hsl(263, 55%, 52%);
+        position: relative;
+    }
+
+    .parent > div:first-child > .description {
+        position: absolute;
+    }
+    .parent > div:first-child > img:first-of-type {
+        position: absolute;
+        right: 14%;
+        top: 0;
+    }
+    /* end child 1 --> Daniel Clifford */
+
+    /* child 2 --> Jonathan Walters */
+    .parent > div:nth-child(2) {
+        grid-area: jonathan;
+        background-color: hsl(217, 19%, 35%);
+    }
+    /* end child 2 --> Jonathan Walters */
+
+    /* child 3 --> Kira Whittle */
+    .parent > div:nth-child(3) {
+        grid-area: kira;
+        background-color: white;
+    }
+    /* end child 3 --> Kira Whittle */
+
+    /* child 4 -->  Jeanette Harmon */
+    .parent > div:nth-child(4) {
+        grid-area: jeanette;
+        background-color: white;
+    }
+    /* end child 4 -->  Jeanette Harmon */
+
+    /* child 5 --> Patrick Abrams */
+    .parent > div:nth-child(5) {
+        grid-area: patrick;
+        background-color: hsl(219, 29%, 14%);
+    }
+    .parent > div:nth-child(5) > .container > img:first-of-type {
+        box-shadow: 0px 0px 0px 1.5px hsl(263, 55%, 52%);
+    }
+    /* end child 5 --> Patrick Abrams */
+
+    /* --------------------------------------------------------------------------------- */
+
+    /* border for images */
+    .parent > div:first-child > .container > img:first-of-type ,
+    .parent > div:nth-child(2) > .container > img:first-of-type {
+        box-shadow: 0px 0px 0px 1.5px rgba(255, 255, 255, 0.5);
+    }
+    
+    .parent > div:nth-child(3) > .container > img:first-of-type ,
+    .parent > div:nth-child(4) > .container > img:first-of-type {
+        box-shadow: 0px 0px 0px 1.5px white;
+    }
+    /* end border for images */
+
+    /* font for names */
+    .parent > div:first-child > .container > .main-detailes > p:first-of-type ,
+    .parent > div:nth-child(2) > .container > .main-detailes > p:first-of-type ,
+    .parent > div:nth-child(5) > .container > .main-detailes > p:first-of-type {
+        color: white;
+    }
+
+    .parent > div:nth-child(3) > .container > .main-detailes > p:first-of-type ,
+    .parent > div:nth-child(4) > .container > .main-detailes > p:first-of-type {
+        color: hsl(219, 29%, 14%);
+    }
+    /* end font for names */
+
+    /* font --> Verified Graduate */
+    .parent > div:first-child > .container > .main-detailes > p:nth-of-type(2) ,
+    .parent > div:nth-child(2) > .container > .main-detailes > p:nth-of-type(2) ,
+    .parent > div:nth-child(5) > .container > .main-detailes > p:nth-of-type(2) {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 11px;
+    }
+
+    .parent > div:nth-child(3) > .container > .main-detailes > p:nth-of-type(2) ,
+    .parent > div:nth-child(4) > .container > .main-detailes > p:nth-of-type(2) {
+        color: hsla(217, 30%, 14%, 0.5);
+        font-size: 11px;
+    }
+    /* end of font --> Verified Graduate */
+
+    /* font of first section in description */
+    .parent > div:first-child > .description > h2 ,
+    .parent > div:nth-child(2) > h2 ,
+    .parent > div:nth-child(5) > h2 {
+        color: white;
+    }
+
+    .parent > div:nth-child(3) > h2 ,
+    .parent > div:nth-child(4) > h2 {
+        color: hsl(219, 29%, 14%);
+    }
+    /* end font of first section in description */
+
+    /* font of second section in description */
+    .parent > div:first-child > .description > p ,
+    .parent > div:nth-child(2) > p ,
+    .parent > div:nth-child(5) > p {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        line-height: 17px;
+        margin-bottom: 0;
+    }
+
+    .parent > div:nth-child(3) > p ,
+    .parent > div:nth-child(4) > p {
+        color: hsla(217, 30%, 14%, 0.7);
+        font-size: 12px;
+        line-height: 17px;
+        margin-bottom: 0;
+    }
+    /* end font of second section in description */
+
+/* for mobile */
+@media (max-width: 380px) {
+    
+    .parent {
+        width: 290px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .parent > div {
+        padding: 20px;
+        border-radius:8px;
+        box-shadow: 0px 0px 20px 0px hsl(217deg 19% 35% / 30%);
+        margin-bottom: 20px;
+        width: 250px;
+    }
+
+    .parent > div:first-child {
+        background-color: hsl(263, 55%, 52%);
+        position: relative;
+        padding-bottom: 360px;
+        width: 250px;
+    }
+
+    .parent > div:first-child > .description {
+        width: 240px;
+        position: absolute;
+    }
+    span {
+        display: inline;
+    }
+}
